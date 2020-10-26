@@ -72,6 +72,7 @@ public class FiltroPage extends BasePage {
 	}
 
 	public String mostrarNumeroResultadoFiltro() throws InterruptedException {
+		Thread.sleep(1000);
 		WebElement txtNumeroResultado = driver
 				.findElement(By.xpath("//*[contains(@id, 'mainContent')]/div[1]/div/div[2]/div/div[1]/h1/span[1]"));
 		String numReg = txtNumeroResultado.getText();
