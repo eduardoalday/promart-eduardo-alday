@@ -1,0 +1,24 @@
+
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testCompile group: 'org.testng', name: 'testng', version: '7.3.0'
+    compile group: 'com.aventstack', name: 'extentreports', version: '3.0.3'
+    compile group: 'de.openkeyword', name: 'autoit', version: '0.0.15'
+    compile group: 'com.google.guava', name: 'guava', version: '30.0-jre'
+}
+
+//String inputFromJenkins = System.getenv('varJenkins')
+ test{
+     useTestNG() {
+       useDefaultListeners = true
+       suites "retoPromartMain.xml"
+     }
+ }
